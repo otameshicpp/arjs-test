@@ -6,13 +6,18 @@
 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true">
         <a-assets>
-            <a-asset-item id="ar2" src="./armodel4.glb"></a-asset-item>
+            <!-- <a-asset-item id="ar2" src="./armodel4.glb"></a-asset-item> -->
+            <a-asset-item id="kin" src="./kinkaku2.glb"></a-asset-item>
         </a-assets>
-        <a-marker type="pattern" url="pattern-arlogo5.patt">
-            <!-- <a-entity position="0 0 0" rotation="0 0 0" scale="0.05 0.05 0.05" gltf-model="./welcome.glb"></a-entity> -->
+        <!-- <a-marker type="pattern" url="pattern-arlogo5.patt">
+            <!-- <a-entity position="0 0 0" rotation="0 0 0" scale="0.05 0.05 0.05" gltf-model="./welcome.glb"></a-entity> 
             <a-entity scale="0.5 0.5 0.5" gltf-model="#ar2" animation-mixer></a-entity>
+        </a-marker> -->
+        <a-marker type="pattern" url="pattern-kinkaku-white.patt">
+            <!-- <a-entity position="0 0 0" rotation="0 0 0" scale="0.05 0.05 0.05" gltf-model="./welcome.glb"></a-entity>  -->
+            <a-entity scale="0.5 0.5 0.5" gltf-model="#kin" animation-mixer></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
